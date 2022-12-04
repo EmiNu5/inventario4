@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body> 
-       <%@include file="navbarmain.jsp" %>
+        <%@include file="header.jsp" %>
         <form action="controlador" method="POST">
             <div class="container mt-4">
                 <center>
@@ -21,15 +21,15 @@
                         <div class="card-body texto-info">
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input type="text" name="textNombre" class="form-control">
+                                <input type="text" name="textNombre" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Marca</label>
-                                <input type="text" name="textMarca" class="form-control">
+                                <input type="text" name="textMarca" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Fec. Alta</label>
-                                <input type="date" name="fecAlta" class="form-control">
+                                <input type="date" name="fecAlta" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Mail proveedor</label>
@@ -49,5 +49,6 @@
                 </center>
             </div>
         </form>
+        <%@include file="footer.jsp" %>
     </body>
 </html>

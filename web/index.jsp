@@ -21,8 +21,8 @@
         <link href="sticky-footer.css" rel="stylesheet">
     </head>
     <body>
+        <%@include file="header.jsp" %>
         <div class="container-fluid p-0">
-          <%@include file="navbarmain.jsp" %>
             <center>
                 <a href="controlador?accion=nuevo" class="my-2 btn btn-primary">Nuevo</a>
                 <a type="button" class="btn btn-success" id="download_xls" download="filename.xls" href="#">Exportar</a>
@@ -98,31 +98,7 @@
                     </table> 
                 </div>
             </div>
-            <footer class="footer footer-expand-sm bg-dark footer-dark fixed-bottom text-muted text-center text-small">
-                <div class="container">
-                    <p class="mb-1"><i class="fa-brands fa-github"></i> 2022 EmiNu5</p>
-                </div>
-            </footer>
-
-            <!-- js section -->
-            <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-            <!-- js navbar logout -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-            
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/excellentexport@3.4.3/dist/excellentexport.min.js"></script>
-            <script>
-
-                let download_xls = document.querySelector("#download_xls")
-                download_xls.addEventListener("click", () => {
-                    ExcellentExport.excel(download_xls, 'datatable')
-                })
-
-            </script>
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <%@include file="footer.jsp" %>
         </div>
     </body>
 </html>
