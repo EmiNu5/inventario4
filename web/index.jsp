@@ -89,9 +89,9 @@
                                     ${dispositivo.estado}
                                 </td>
                                 <td>
-                                    <a href="Controlador?accion=Editar&id=${dispositivo.idDispositivo}" class="btn btn-outline-warning"><i class="fa-solid fa-pen"></i></a> 
-                                    <a href="Controlador?accion=Ver&id=${dispositivo.observacion}" class="btn btn-outline-info"><i class="fa-solid fa-circle-info"></i></a> 
-                                    <a href="Controlador?accion=Delete&id=${dispositivo.idDispositivo}" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></a> 
+                                    <a href="controlador?accion=Editar&id=${dispositivo.idDispositivo}" class="btn btn-outline-warning"><i class="fa-solid fa-pen"></i></a> 
+                                    <a href="controlador?accion=Ver&id=${dispositivo.observacion}" class="btn btn-outline-info"><i class="fa-solid fa-circle-info"></i></a> 
+                                    <a href="controlador?accion=Delete&id=${dispositivo.idDispositivo}" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></a> 
                                 </td>
                             </tr>
                         </c:forEach>

@@ -64,6 +64,12 @@ public class controlador extends HttpServlet {
                         request.getRequestDispatcher("mensaje.jsp").forward(request, response);
                     }
                     break;
+                case "Editar":
+                    int id = Integer.valueOf(request.getParameter("id"));//obtenemos el id que nos pedie como parametro
+                    clsDispositivo d1 = daoD.getId(id);
+                    request.setAttribute("d1", d1);
+                    request.getRequestDispatcher("editar.jsp").forward(request, response);
+                    break;
                 default:
                     break;
             }
@@ -96,12 +102,12 @@ public class controlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-       // ArrayList<modelo.clsEstado> categorias = null;
-       // dao = new modeloEstadoDAO();
-       // categorias = (ArrayList<clsEstado>) dao.getAllEstado();
-       // request.setAttribute("categorias", categorias);
+        // ArrayList<modelo.clsEstado> categorias = null;
+        // dao = new modeloEstadoDAO();
+        // categorias = (ArrayList<clsEstado>) dao.getAllEstado();
+        // request.setAttribute("categorias", categorias);
         // en que JSP esta el combobox
-       // request.getRequestDispatcher("index.jsp").forward(request, response);
+        // request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
     /**

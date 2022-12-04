@@ -51,4 +51,23 @@ public class modeloDispositivoDAO implements interfazDispositivoDAO {
         return resultado;
     }
 
+    @Override
+    public clsDispositivo getId(int idDispositivo) {
+        String sql = "select * from dispositivo where idDispositivo =?";
+        clsDispositivo d = new clsDispositivo();
+        try {
+            PreparedStatement ps = conexion.Conectar().prepareStatement(sql);
+            ps.setInt(1, idDispositivo);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                d.setIdDispositivo(rs.getInt(1));
+                d.setNombre(rs.getString(2));
+                d.setMarca(rs.getString(3));
+                d.setProveedor(rs.getString(5));
+            }
+        } catch (Exception e) {
+            System.err.println("Error: " + e);
+        }
+        return d;
+    }
 }
