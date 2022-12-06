@@ -22,10 +22,12 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0"    >
             <center>
                 <a href="controlador?accion=nuevo" class="my-2 btn btn-primary">Nuevo</a>
-                <a type="button" class="btn btn-success" id="download_xls" download="filename.xls" href="#">Exportar</a>
+                <a href="controlador?accion=exportar" class="my-2 btn btn-primary">Exportar</a>  
+                    
+                <!--<a type="button" class="btn btn-success" id="download_xls" download="filename.xls" href="#">Exportar</a>-->
                 <div class="form-group form-group-lg">
                     <label class="col-sm-2 control-label" for="lg" for="categorias" >Categoria</label>
                     <div class="col-sm-4">

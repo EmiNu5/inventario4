@@ -15,6 +15,7 @@ import modelo.clsDispositivo;
 import modelo.clsEstado;
 import modeloDAO.modeloDispositivoDAO;
 import modeloDAO.modeloEstadoDAO;
+import modeloDAO.modeloMySqlAExcel;
 
 @WebServlet(name = "controlador", urlPatterns = {"/controlador"})
 public class controlador extends HttpServlet {
@@ -34,6 +35,8 @@ public class controlador extends HttpServlet {
                 case "nuevo":
                     request.getRequestDispatcher("add.jsp").forward(request, response);
                     break;
+                case "exportar":
+                    modeloMySqlAExcel.Exportar();
                 case "Buscar":
                     listar(request, response);
                     break;
@@ -107,7 +110,7 @@ public class controlador extends HttpServlet {
         // categorias = (ArrayList<clsEstado>) dao.getAllEstado();
         // request.setAttribute("categorias", categorias);
         // en que JSP esta el combobox
-        // request.getRequestDispatcher("index.jsp").forward(request, response);
+        // request.getRequestDispatcher("index.jsp").forward(request, response);      
     }
 
     /**
