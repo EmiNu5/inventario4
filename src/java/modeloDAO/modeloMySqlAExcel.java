@@ -11,7 +11,7 @@ import jxl.write.Label;
 import jxl.write.WritableWorkbook;
 public class modeloMySqlAExcel {
 
-    private static final File file = new File("C:\\");
+    private static final File file = new File("C:\\Users\\Administrador.PUESTO09\\Downloads\\fichero.xls");
 
     public static void Exportar() {
         int row = 0;

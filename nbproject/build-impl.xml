@@ -1126,6 +1126,7 @@ exists or setup the property manually. For example like this:
         <condition property="browser" value="/opt/csw/bin/mozilla">
             <available file="/opt/csw/bin/mozilla"/>
         </condition>
+        
     </target>
     <target depends="-get-browser" if="do.display.browser.cl" name="-display-browser-cl">
         <fail unless="browser">
