@@ -21,6 +21,7 @@
         <link href="sticky-footer.css" rel="stylesheet">
     </head>
     <body>
+        
         <%@include file="header.jsp" %>
         <div class="container-fluid p-0"    >
             <center>
